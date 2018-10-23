@@ -15,6 +15,8 @@
 
 body {
 	font-family: 'K2D', 'Noto Sans TC', sans-serif;
+	font-weight: 300;
+	font-size: 0.9rem;
 }
 h1, h2, h3, h4 {
 	font-family: 'Courgette', 'Noto Sans TC', sans-serif;
@@ -23,7 +25,7 @@ h1, h2, h3, h4 {
 .hide { display: none !important }
 
 $banner-height: 350px;
-$holder-width: 900px;
+$holder-width: 800px;
 .top-frame {
 	margin: 0 auto;
 	padding: 10px 0px;
@@ -103,6 +105,7 @@ $holder-width: 900px;
 		.sec-text {
 			display: inline-block;
 			vertical-align: middle;
+			margin: 0;
 		}
 	}
 }
