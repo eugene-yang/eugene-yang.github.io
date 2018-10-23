@@ -16,16 +16,24 @@
 body {
 	font-family: 'K2D', 'Noto Sans TC', sans-serif;
 	font-weight: 300;
-	font-size: 0.9rem;
+	font-size: 1.0rem;
 }
 h1, h2, h3, h4 {
 	font-family: 'Courgette', 'Noto Sans TC', sans-serif;
 }
 
-.hide { display: none !important }
+@include media-breakpoint-down(xs) {
+	body{ font-size: 0.9rem; }
+}
+@include media-breakpoint-down(sm) { 
+	body{ font-size: 0.9rem; }
+}
+
+.hide, .template { display: none !important }
 
 $banner-height: 350px;
-$holder-width: 800px;
+$holder-width: 900px;
+$footer-height: 100px;
 .top-frame {
 	margin: 0 auto;
 	padding: 10px 0px;
@@ -36,7 +44,7 @@ $holder-width: 800px;
 	max-height: 100%;
 	background: url("../img/banner.jpg") no-repeat;
 	background-position: bottom center;
-	background-size: auto 100%;
+	background-size: cover;
 
 	.title-holder {
 		width: $holder-width;
@@ -68,6 +76,15 @@ $holder-width: 800px;
 				padding: 10px 20px;
 				transform: translate(0, -50%);
 				color: white;
+				a { color: white }
+				.me-taiwan {
+					display: inline-block;
+					height: 40px;
+					width: 30px;
+					background: url("../img/taiwan.svg") no-repeat center;
+					background-size: 100% 100%;
+					vertical-align: bottom;
+				}
 			}
 		}
 	}
@@ -77,6 +94,7 @@ $holder-width: 800px;
 	margin: 0 auto;
 	position: relative;
 	width: 100%;
+	margin-bottom: $footer-height+25px;
 
 	.content-holder {
 		width: $holder-width;
@@ -87,7 +105,7 @@ $holder-width: 800px;
 			&::after {
 				content: ' ';
 				display: block;
-				width: 100px;
+				width: 90px;
 				border: 1px solid #AAA;
 				position: relative;
 				margin: 5px;
@@ -96,8 +114,8 @@ $holder-width: 800px;
 		.sec-logo {
 			display: inline-block;
 			width: auto;
-			height: 100px;
-			margin: 10px 20px 10px 0px;
+			height: 90px;
+			margin: 10px 10px 10px 0px;
 			&.round {
 				border-radius: 20px;
 			}
@@ -106,6 +124,51 @@ $holder-width: 800px;
 			display: inline-block;
 			vertical-align: middle;
 			margin: 0;
+		}
+
+		.paper {
+			font-family: sans-serif;
+			p { margin:0 }
+			
+			.author { font-family: Cinzel; }
+			.journal, .status { font-style: italic; }
+			.buttons { color: white; }
+		}
+	}
+}
+
+.footer-frame {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding-top: 15px;
+	height: $footer-height;
+	background: $light;
+
+	.footer-holder {
+		margin: 0 auto;
+		width: $holder-width;
+		text-align: center;
+		color: gray;
+	}
+	.contact-icons {
+		display: block;
+		text-align: center;
+		
+		.icon {
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			margin: 0px 5px;
+
+			&.email{ background: url("../img/icon-email.svg") no-repeat center; }
+			&.github{ background: url("../img/icon-github.svg") no-repeat center; }
+			&.twitter{ background: url("../img/icon-twitter.svg") no-repeat center; }
+			&.linkedin{ background: url("../img/icon-linkedin.svg") no-repeat center; }
+			background-size: contain;
 		}
 	}
 }

@@ -3,16 +3,41 @@
 <head>
 	<title>Eugene Yang</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<base target="_blank">
 	<link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=K2D' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/earlyaccess/notosanstc.css' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="stylesheet/main.css">
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bibtex_js.js"></script>
 	<script src="js/main.js"></script>
+	<style id="bibtex">
+@article{icail2017,
+	author = {E. Yang and D. Grossman and O. Frieder and R. Yurchak},
+	title = {Effectiveness Results for Popular {e-Discovery} Algorithms},
+	journal = {ICAIL},
+	year = {2017},
+	href = {http://ir.cs.georgetown.edu/downloads/yang-icail-2017.pdf}
+}
+@article{desires2018,
+	title={Retrieval and Richness when Querying by Document},
+	author={E. Yang and D. D. Lewis and O. Frieder and D. Grossman and R. Yurchak},
+	journal = {DESIRES},
+	year={2018},
+	href={http://desires.dei.unipd.it/papers/paper12.pdf}
+}
+@article{soda2019,
+	title={{I/O}-Efficient Algorithms for Topological Sort and Related Problems},
+	author={N. Cao and J. T. Fineman and K. Russell and E. Yang},
+	journal = {SODA},
+	year={2019},
+	status={accepted}
+}
+	</style>
 </head>
 <body>
-
 
 <div class="top-frame">
 	<div class="title-holder container">
@@ -22,9 +47,10 @@
 			</div>
 			<div class="col-md-auto">
 				<div class="banner-title">
-					<h1 class="me-name">Eugene Yang</h1>
+					<h1 class="me-name">Eugene Yang <span class="me-taiwan"></span> </h1>
 					<h4 class="me-desc">3rd Year Computer Science Ph.D. Student</h4>
-					<h6 class="me-contact">eugene@ir.cs.georgetown.edu | STM: 313.15</h6>
+					<h6 class="me-contact">eugene@ir.cs.georgetown.edu | STM313.15 | 
+										  <a href="http://eugene-yang.github.io/blog/">Mandarin Blog</a></h6>
 				</div>
 			</div>
 		</div>
@@ -37,10 +63,21 @@
 		</div>
 		<div class="row">
 			<div class="col-md">
-				<p>Something gonna go here</p>
+				<p>
+					I am a Computer Science Ph.D. student in Georgetown University under the direction of 
+					<a href="http://people.cs.georgetown.edu/~ophir/">Ophir Frieder</a> in the <a href="http://ir.cs.georgetown.edu">IR Lab</a>.
+					I work on information retrieval and machine learning in legal context. 
+					Check out my <a href="http://eugene-yang.github.io/blog/">Mandarin blog</a> for my lastest research and thoughts.
+					<br/>I am a baseball fan, a frontend engineer, an experimental cooker, frisbee beginner, and recently started to learn fortune-telling.
+				</p>
 			</div>
 			<div class="col-md">
-				<p>這邊會加些字</p>
+				<p>
+					目前我在 Georgetown University 攻讀資訊工程博士，指導老師為 <a href="http://people.cs.georgetown.edu/~ophir/">Ophir Frieder</a> 。
+					同時我也是 <a href="http://ir.cs.georgetown.edu">IR Lab</a> 中的研究博士生。
+					主要的研究主題為法律資訊檢索及機器學習。我相關研究成果及觀點都會放在我<a href="http://eugene-yang.github.io/blog/">中文的部落格</a>中。
+				</p>
+				<p>我是個 MLB 棒球迷、前端工程師、黑暗料理界的廚師、菜鳥飛盤運動員，最近也開始研究紫微斗數。</p>
 			</div>
 		</div>
 		<div class="row">
@@ -50,7 +87,7 @@
 			<div class="col-md">
 				<img class="sec-logo" src="img/georgetown.jpg">
 				<p class="sec-text">
-					<a href="http://www.georgetown.edu" target="_blank">Georgetown University</a><br />
+					<a href="http://www.georgetown.edu">Georgetown University</a><br />
 					PhD in Computer Science<br>
 					2016 - Present
 				</p>
@@ -58,7 +95,7 @@
 			<div class="col-md">
 				<img class="sec-logo" src="img/nthu.png">
 				<p class="sec-text">
-					<a href="http://www.nthu.edu.tw" target="_blank">National Tsing Hua University, TW</a><br />
+					<a href="http://www.nthu.edu.tw">National Tsing Hua University, TW</a><br />
 					BS in Quantitative Finance<br>
 					Minor: Computer Science & Math<br>
 					2011 - 2015
@@ -72,7 +109,7 @@
 			<div class="col-md">
 				<img class="sec-logo round" src="img/brainspace-logo.jpg">
 				<p class="sec-text">
-					<a href="http://www.georgetown.edu" target="_blank">Brainspace, A Cyxtera Business</a><br />
+					<a href="https://www.brainspace.com/">Brainspace, A Cyxtera Business</a><br />
 					Intern Data Scientist<br>
 					2018 Summer
 				</p>
@@ -80,15 +117,58 @@
 			<div class="col-md">
 				<img class="sec-logo round" src="img/tradingvalley.png">
 				<p class="sec-text">
-					<a href="https://www.tradingvalley.com/en/" target="_blank">Trading Valley</a><br />
+					<a href="https://www.tradingvalley.com/en/">Trading Valley</a><br />
 					Chief Frontend Developer<br>
 					Nov. 2014 - July 2016
 				</p>
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-md"><h3>Publications</h3></div>
+		</div>
+		<div class="row">
+			<div class="col-md publication">
+				<div class="paper template">
+					<div class="entry">
+						<span class="author">E. Yang and D. D. Lewis and O. Frieder and D. Grossman and R. Yurchak</span>,
+						<span class="title">Effectiveness Results for Popular e-Discovery Algorithms</span>.
+						<span class="journal">ICAIL</span>
+						(<span class="year">2017</span>)
+						<span class="status">accepted</span>
+					</div>
+					<div class="buttons">
+						<a class="badge badge-pill badge-info pdf">PDF</a>
+						<a class="badge badge-pill badge-success bib" data-toggle="modal" data-target="#bibtexmodal" data-raw="12312312" href="#">BIBTEX</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer-frame">
+	<div class="footer-holder">
+		<div class="contact-icons">
+			<a class="icon email" href="mailto: eugene@ir.cs.georgetown.edu"></a>
+			<a class="icon github" href="https://github.com/eugene-yang"></a>
+			<a class="icon twitter" href="https://twitter.com/EYangTW"></a>
+			<a class="icon linkedin" href="https://www.linkedin.com/in/eugene-yang/"></a>
+		</div>
+		<p>ⓒ 2018 Eugene Yang</p>
 	</div>
 </div>
 
+<div class="modal fade" id="bibtexmodal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body content">
+				<pre class="raw"></pre>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
 
 </body>
 </html>
