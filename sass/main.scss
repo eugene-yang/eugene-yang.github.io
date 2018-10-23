@@ -1,0 +1,108 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+// @font-face {
+//     font-family: custom-sans-serif;
+//     src: local("Heiti TC"), local("微軟正黑體"), local("Microsoft JhengHei");
+//     unicode-range: U+4E00-9FFF;
+// }
+
+// @font-face {
+//     font-family: custom-sans-serif;
+//     src: local(Helvetica), local(Segoe UI);
+//     unicode-range: U+00-024F;
+// }
+
+body {
+	font-family: 'K2D', 'Noto Sans TC', sans-serif;
+}
+h1, h2, h3, h4 {
+	font-family: 'Courgette', 'Noto Sans TC', sans-serif;
+}
+
+.hide { display: none !important }
+
+$banner-height: 350px;
+$holder-width: 900px;
+.top-frame {
+	margin: 0 auto;
+	padding: 10px 0px;
+	position: relative;
+	width: 100%;
+
+	height: $banner-height;
+	max-height: 100%;
+	background: url("../img/banner.jpg") no-repeat;
+	background-position: bottom center;
+	background-size: auto 100%;
+
+	.title-holder {
+		width: $holder-width;
+		padding: 0;
+		max-width: 100%;
+		height: $banner-height;
+
+		.row {
+			position: relative;
+			width: 100%;
+			top: 50%;
+			padding: 0px;
+			margin: 0px;
+			transform: translate(0, -50%);
+
+			$me-photo-size: 150px;
+			.me-photo {
+				margin: 0 auto;
+				width: $me-photo-size;
+				height: $me-photo-size;
+				border: 4px solid white;
+				border-radius: $me-photo-size;
+				background: url("../img/me.jpg") no-repeat center;
+				background-size: contain;
+			}
+			.banner-title {
+				position: relative;
+				top: 50%;
+				padding: 10px 20px;
+				transform: translate(0, -50%);
+				color: white;
+			}
+		}
+	}
+}
+
+.main-frame {
+	margin: 0 auto;
+	position: relative;
+	width: 100%;
+
+	.content-holder {
+		width: $holder-width;
+		max-width: 100%;
+
+		h3 {
+			margin: 20px 0px;
+			&::after {
+				content: ' ';
+				display: block;
+				width: 100px;
+				border: 1px solid #AAA;
+				position: relative;
+				margin: 5px;
+			}
+		}
+		.sec-logo {
+			display: inline-block;
+			width: auto;
+			height: 100px;
+			margin: 10px 20px 10px 0px;
+			&.round {
+				border-radius: 20px;
+			}
+		}
+		.sec-text {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+}
