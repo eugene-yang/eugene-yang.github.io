@@ -7,6 +7,7 @@ $(function(){
     var entries = Object.values( parser.getEntries() ).sort( (a,b) => { a['YEAR'] > b['YEAR'] } )
     entries.forEach( (entry) => {
         $clone = $template.clone().removeClass('template');
+        entry['HREF'] = entry['URL']
         entry['TITLE'] = entry['TITLE'].replace('{', '').replace('}', '');
         
         ['author', 'title', 'journal', 'year', 'status'].forEach( (k) => {
