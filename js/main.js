@@ -8,6 +8,7 @@ $(function(){
     entries.forEach( (entry) => {
         $clone = $template.clone().removeClass('template');
         entry['HREF'] = entry['URL']
+        entry['JOURNAL'] = entry['JOURNAL'] || entry['BOOKTITLE'] || entry['ARCHIVEPREFIX']
         entry['TITLE'] = entry['TITLE'].replace('{', '').replace('}', '');
         
         ['author', 'title', 'journal', 'year', 'status'].forEach( (k) => {
