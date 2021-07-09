@@ -10045,6 +10045,7 @@ h1, h2, h3, h4 {
 }
 .main-frame .content-holder .paper {
   font-family: sans-serif;
+  margin-bottom: 10px;
 }
 .main-frame .content-holder .paper p {
   margin: 0;
@@ -10054,6 +10055,9 @@ h1, h2, h3, h4 {
 }
 .main-frame .content-holder .paper .buttons {
   color: white;
+}
+.main-frame .content-holder .talk .title {
+  font-weight: bolder;
 }
 
 .footer-frame {
