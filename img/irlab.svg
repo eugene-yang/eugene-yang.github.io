@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient-0" gradientUnits="userSpaceOnUse" x1="128.524" y1="100.355" x2="128.524" y2="350.802" gradientTransform="matrix(0.999962, 0.008712, -0.008057, 0.9248, 29.549367, -77.231008)">
+      <stop offset="0" style="stop-color: rgb(224, 152, 66);"/>
+      <stop offset="1" style="stop-color: rgb(237, 171, 70);"/>
+    </linearGradient>
+    <linearGradient id="gradient-1" gradientUnits="userSpaceOnUse" x1="252.681" y1="151.075" x2="252.681" y2="338.893" gradientTransform="matrix(1, 0, 0, 1, -70.661315, -85.003326)">
+      <stop offset="0" style="stop-color: rgb(70, 70, 70);"/>
+      <stop offset="1" style="stop-color: rgb(70, 70, 70);"/>
+    </linearGradient>
+  </defs>
+  <polygon style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" points="51.416 113.759"/>
+  <path style="stroke-width: 5; fill: url(#gradient-0); stroke: rgb(118, 89, 48);" d="M 57.669 254.087 L 56.529 70.961 L 33.718 31.954 L 77.213 5.354 C 81.059 3.504 83.259 3.106 86.113 6.192 L 112.645 52.941 L 77.972 73.243 L 105.573 73.471 L 104.889 254.365 L 57.669 254.087 Z"/>
+  <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" d="M 155.059 75.638"/>
+  <path style="stroke-width: 5; stroke: rgb(56, 56, 56); fill: url(#gradient-1);" d="M 123.291 253.612 L 123.111 72.147 L 161.081 71.787 L 161.756 92.83 C 176.224 69.955 205.382 55.072 240.929 76.325 L 223.402 111.992 C 198.778 93.884 164.941 106.547 162.881 141.869 L 161.599 253.891 L 123.291 253.612 Z"/>
+  <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);"/>
+  <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" d="M 189.807 195.895"/>
+  <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" d="M 195.188 204.639"/>
+</svg>

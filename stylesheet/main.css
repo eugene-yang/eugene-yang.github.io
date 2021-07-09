@@ -10028,8 +10028,8 @@ h1, h2, h3, h4 {
 }
 .main-frame .content-holder .sec-logo {
   display: inline-block;
-  width: auto;
-  height: 90px;
+  width: 90px;
+  height: auto;
   margin: 10px 10px 10px 0px;
 }
 .main-frame .content-holder .sec-logo.round {
