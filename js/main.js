@@ -20,6 +20,9 @@ $(function(){
             entry['HREF'] || $clone.find('.pdf').hide()
             $clone.find('.bib').data('raw', entry['BIBTEXRAW'])
 
+            $clone.find('.tag').hide()
+            entry['TAG'] && $clone.find('.tag').text( entry['TAG'] ).show()
+
             $clone.insertAfter( $template );
         } )
         
