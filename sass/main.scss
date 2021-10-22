@@ -133,15 +133,14 @@ $footer-height: 100px;
 
 		.paper {
 			font-family: sans-serif;
-			margin-bottom: 10px;
+			margin-bottom: 15px;
+
 			p { margin:0 }
 			
-			.author { font-family: Cinzel; }
+			.title {font-weight: 400;}
+			// .author { font-family: Cinzel; }
 			// .journal, .status { font-style: italic; }
 			.buttons { color: white; }
-		}
-		.talk .title {
-			font-weight: bolder;
 		}
 	}
 }
