@@ -10046,12 +10046,17 @@ h1, h2, h3, h4 {
 .main-frame .content-holder .paper {
   font-family: sans-serif;
   margin-bottom: 15px;
+  text-transform: capitalize;
 }
 .main-frame .content-holder .paper p {
   margin: 0;
 }
 .main-frame .content-holder .paper .title {
   font-weight: 400;
+}
+.main-frame .content-holder .paper .author .self {
+  font-weight: 400;
+  color: #007bff;
 }
 .main-frame .content-holder .paper .buttons {
   color: white;

@@ -11,11 +11,13 @@ $(function(){
             $clone = $template.clone().removeClass('template');
             entry['HREF'] = entry['URL']
             entry['JOURNAL'] = entry['JOURNAL'] || entry['BOOKTITLE'] || entry['ARCHIVEPREFIX']
+            entry['JOURNAL'] = entry['JOURNAL'] && entry['JOURNAL'].replace("Proceedings of ", "")
             entry['TITLE'] = entry['TITLE'].replace('{', '').replace('}', '');
             
-            ['author', 'title', 'journal', 'year', 'status'].forEach( (k) => {
+            ['title', 'journal', 'year', 'status'].forEach( (k) => {
                 $clone.find( "."+k ).text( entry[ k.toUpperCase() ] )
             })
+            $clone.find('.author').html(entry['AUTHOR'].replaceAll(" and", ",").replace("Eugene Yang", "<span class='self'>Eugene Yang</span>"))
             $clone.find('.pdf').attr('href', entry['HREF'])
             entry['HREF'] || $clone.find('.pdf').hide()
             $clone.find('.bib').data('raw', entry['BIBTEXRAW'])
