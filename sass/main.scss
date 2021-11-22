@@ -139,9 +139,12 @@ $footer-height: 100px;
 			p { margin:0 }
 			
 			.title {font-weight: 400;}
-			.author .self { 
-				font-weight: 400; 
-				color: $primary;
+			.author {
+				a { color: $dark; }
+				.self { 
+					font-weight: 400; 
+					color: $primary;
+				}
 			}
 			// .author { font-family: Cinzel; }
 			// .journal, .status { font-style: italic; }

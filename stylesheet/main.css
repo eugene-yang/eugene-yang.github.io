@@ -10054,6 +10054,9 @@ h1, h2, h3, h4 {
 .main-frame .content-holder .paper .title {
   font-weight: 400;
 }
+.main-frame .content-holder .paper .author a {
+  color: #343a40;
+}
 .main-frame .content-holder .paper .author .self {
   font-weight: 400;
   color: #007bff;

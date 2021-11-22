@@ -1,3 +1,12 @@
+const AUTHOR_WEBSITES = {
+    'Sean MacAvaney': 'https://macavaney.us/',
+    'Katina Russell': 'https://katinarussell.github.io/',
+    'Hao-Ren Yao': 'https://sites.google.com/georgetown.edu/howard-yao',
+    'Ophir Frieder': 'https://people.cs.georgetown.edu/~ophir/',
+    'David D. Lewis': 'https://www.linkedin.com/in/daviddlewis/',
+    'Nazli Goharian': 'https://people.cs.georgetown.edu/~nazli/'
+}
+
 $(function(){
     // handling bibtex
     var $template = $('.publication .paper.template');
@@ -12,12 +21,15 @@ $(function(){
             entry['HREF'] = entry['URL']
             entry['JOURNAL'] = entry['JOURNAL'] || entry['BOOKTITLE'] || entry['ARCHIVEPREFIX']
             entry['JOURNAL'] = entry['JOURNAL'] && entry['JOURNAL'].replace("Proceedings of ", "")
-            entry['TITLE'] = entry['TITLE'].replace('{', '').replace('}', '');
+            entry['TITLE'] = entry['TITLE'].replace('{', '').replace('}', '')
+
+            entry['AUTHOR'] = entry['AUTHOR'].split(" and ").map(
+                name => AUTHOR_WEBSITES[name] !== undefined ? `<a href='${AUTHOR_WEBSITES[name]}'>${name}</a>`:name
+            ).join(", ").replace("Eugene Yang", "<span class='self'>Eugene Yang</span>");
             
-            ['title', 'journal', 'year', 'status'].forEach( (k) => {
-                $clone.find( "."+k ).text( entry[ k.toUpperCase() ] )
+            ['author', 'title', 'journal', 'year', 'status'].forEach( (k) => {
+                $clone.find( "."+k ).html( entry[ k.toUpperCase() ] )
             })
-            $clone.find('.author').html(entry['AUTHOR'].replaceAll(" and", ",").replace("Eugene Yang", "<span class='self'>Eugene Yang</span>"))
             $clone.find('.pdf').attr('href', entry['HREF'])
             entry['HREF'] || $clone.find('.pdf').hide()
             $clone.find('.bib').data('raw', entry['BIBTEXRAW'])
@@ -37,6 +49,4 @@ $(function(){
             $(this).find('.raw').html( raw );
         })
     } )
-
-
 });
