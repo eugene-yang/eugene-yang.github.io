@@ -4,7 +4,8 @@ const AUTHOR_WEBSITES = {
     'Hao-Ren Yao': 'https://sites.google.com/georgetown.edu/howard-yao',
     'Ophir Frieder': 'https://people.cs.georgetown.edu/~ophir/',
     'David D. Lewis': 'https://www.linkedin.com/in/daviddlewis/',
-    'Nazli Goharian': 'https://people.cs.georgetown.edu/~nazli/'
+    'Nazli Goharian': 'https://people.cs.georgetown.edu/~nazli/',
+    'Suraj Nair': 'https://srnair.netlify.app/'
 }
 
 $(function(){
