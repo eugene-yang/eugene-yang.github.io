@@ -1,4 +1,6 @@
 const AUTHOR_WEBSITES = {
+    'Andrew Yates': 'https://andrewyates.net/',
+    'Benjamin Van Durme': 'https://www.cs.jhu.edu/~vandurme/',
     'Sean MacAvaney': 'https://macavaney.us/',
     'Katina Russell': 'https://katinarussell.github.io/',
     'Hao-Ren Yao': 'https://sites.google.com/georgetown.edu/howard-yao',
