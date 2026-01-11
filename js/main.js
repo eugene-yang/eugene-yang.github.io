@@ -1,4 +1,5 @@
 const AUTHOR_WEBSITES = {
+    'Saron Samuel': 'https://saronsamuel.com/',
     'Andrew Yates': 'https://andrewyates.net/',
     'Benjamin Van Durme': 'https://www.cs.jhu.edu/~vandurme/',
     'Sean MacAvaney': 'https://macavaney.us/',
@@ -29,7 +30,7 @@ $(function(){
             entry['AUTHOR'] = entry['AUTHOR'].split(" and ").map(
                 name => AUTHOR_WEBSITES[name] !== undefined ? `<a href='${AUTHOR_WEBSITES[name]}'>${name}</a>`:name
             ).join(", ").replace("Eugene Yang", "<span class='self'>Eugene Yang</span>");
-            
+
             ['author', 'title', 'journal', 'year', 'status'].forEach( (k) => {
                 $clone.find( "."+k ).html( entry[ k.toUpperCase() ] )
             })
@@ -42,7 +43,7 @@ $(function(){
 
             $clone.insertAfter( $template );
         } )
-        
+
         for( var k in entries ){
             $clone = $
         }
