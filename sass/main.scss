@@ -145,6 +145,127 @@ $footer-height: 100px;
 	}
 }
 
+// Publication filter buttons — shared base
+.filter-btn {
+	padding: 2px 8px;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	font-family: sans-serif;
+	font-size: 0.82rem;
+	cursor: pointer;
+	color: #777;
+	background: none;
+	line-height: 1.5;
+
+	&:hover, &:focus {
+		background: #f0f0f0;
+		color: #333;
+		outline: none;
+	}
+	&[data-filter-type="year"].active {
+		background: $primary;
+		color: white;
+		border-color: $primary;
+	}
+	&[data-filter-type="venue"].active {
+		background: $success;
+		color: white;
+		border-color: $success;
+	}
+}
+
+// Desktop publication layout — sidebar floats into the left margin
+$pub-sidebar-width: 140px;
+
+.pub-flex-outer {
+	@include media-breakpoint-up(xl) {
+		display: flex;
+		align-items: flex-start;
+		margin-left: -$pub-sidebar-width;
+		width: calc(100% + #{$pub-sidebar-width});
+	}
+}
+
+.pub-sidebar-col {
+	@include media-breakpoint-up(xl) {
+		flex: 0 0 $pub-sidebar-width;
+		padding-right: 10px;
+		position: sticky;
+		top: 20px;
+		align-self: flex-start;
+	}
+
+	.filter-section { margin-bottom: 14px; }
+
+	.filter-title {
+		font-family: sans-serif;
+		font-size: 0.68rem;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		color: #bbb;
+		margin-bottom: 4px;
+	}
+
+	.filter-btn {
+		display: block;
+		width: 100%;
+		text-align: left;
+		margin: 1px 0;
+		border-radius: 4px;
+	}
+}
+
+// Preserve the same 15px side padding the original col-md gave
+.pub-papers-col {
+	padding-left: 15px;
+	padding-right: 15px;
+	@include media-breakpoint-up(xl) { flex: 1; }
+}
+
+// Mobile sticky filter bar
+.pub-filter-mobile {
+	background: white;
+	border-bottom: 1px solid #e8e8e8;
+	padding: 5px 0;
+	position: sticky;
+	top: 0;
+	z-index: 500;
+	margin-bottom: 4px;
+
+	.filter-scroll {
+		display: flex;
+		align-items: center;
+		overflow-x: auto;
+		padding: 2px 4px;
+		-webkit-overflow-scrolling: touch;
+		scrollbar-width: none;
+		&::-webkit-scrollbar { display: none; }
+	}
+
+	.filter-label {
+		font-family: sans-serif;
+		font-size: 0.68rem;
+		color: #bbb;
+		white-space: nowrap;
+		margin: 0 4px;
+		flex-shrink: 0;
+	}
+
+	.filter-separator {
+		flex-shrink: 0;
+		width: 1px;
+		height: 18px;
+		background: #ddd;
+		margin: 0 6px;
+	}
+
+	.filter-btn {
+		flex-shrink: 0;
+		margin: 1px 2px;
+		border: 1px solid #ddd;
+	}
+}
+
 .footer-frame {
 	position: fixed;
 	display: flex;
