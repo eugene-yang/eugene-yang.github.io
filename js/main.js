@@ -20,6 +20,7 @@ const VENUE_PATTERNS = [
     { key: 'ICLR',    re: /ICLR|International Conference on Learning Representations/ },
     { key: 'COLM',    re: /COLM|Conference on Language Modeling/ },
     { key: 'NAACL',   re: /NAACL/ },
+    { key: 'ACL',   re: /ACL/ },
     // { key: 'CIKM',    re: /CIKM/ },
     // { key: 'DocEng',  re: /DocEng/ },
     { key: 'ICAIL',   re: /ICAIL/ },
